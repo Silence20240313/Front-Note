@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-快速入门</title>
+   <!-- 第一步：引入Vue.js文件 -->
+    <script src = "js-note/js/vue.js"></script>
+</head>
+
+<body>
+   <!-- 第三步：编写视图 -->
+  <div id = "app">
+   <input type="text" v-model = "message">
+   {{message}}
+  </div>
+</body>
+
+<script>
+    // 第二步：创建Vue核心对象，定义数据模型
+    // data里面的数据可以改 其他都不行 是固定格式
+    // 定义vue对象
+    new Vue({
+        el:"#app",  //Vue接管区域
+        data:{
+            message:"Hello Vue"
+        }
+    })
+</script> 
+
+</html>

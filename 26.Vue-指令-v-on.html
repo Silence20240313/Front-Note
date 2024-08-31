@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-指令-v-om</title>
+     <!-- 第一步：引入Vue.js文件 -->
+    <script src = "js-note/js/vue.js"></script>
+</head>
+
+<body>
+ <!-- 第三步：编写视图 -->
+  <div id = "app">
+   <input type="button" value="点我一下" v-on:click="handle()">
+
+   <!-- 简化写法 -->
+   <!-- <input type="button" value="点我一下" @click="handle()">  -->
+  </div>
+</body>
+
+<script>
+  // 第二步：创建Vue核心对象，定义数据模型
+    // 定义vue对象
+    new Vue({
+        el:"#app",  //Vue接管区域
+        data:{
+          
+        },
+        // 数据放在data里，方法放在methods里
+        methods: {
+          handle:function(){
+            alert("你点了我一下");
+          }
+        }
+    })
+</script>    
+</html>

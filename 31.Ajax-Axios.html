@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax-Axios</title>
+     <!-- 第一步：引入Axios的js文件 -->
+    <script src = "js-note/js/axios.js"></script>
+</head>
+<body>
+<input type="button" value="获取数据GET" onclick="get()">
+<input type="button" value="删除数据POST" onclick="post()">
+</body>
+<script>
+   function get(){
+      // 通过Axios发送异步请求-get
+      axios({
+        method:"get",
+        url:"https://www.baidu.com"
+      }).then(result=>{
+        // console.log(result.data);
+        console.log(result);
+      })
+
+      // 简化写法
+      axios.get("https://www.baidu.com").then(result=>{
+        // console.log(result.data);
+        console.log(result);
+      })
+   }
+
+   function post(){
+     // 通过Axios发送异步请求-post
+     axios({
+        method:"post",
+        url:" ",
+        data:"id = 1"
+      }).then(result=>{
+        console.log(result.data);
+      })
+      axios.post("","id = 1").then(result=>{
+        console.log(result.data);
+      })
+  }
+</script>    
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-指令-v-bind和v-model</title>
+    <!-- 第一步：引入Vue.js文件 -->
+    <script src = "js-note/js/vue.js"></script>
+</head>
+<body>
+    <!-- 第三步：编写视图 -->
+    <!--  href:超链接跳转到哪里 -->
+    <!-- v-bind:给html标签绑定属性  href:url:"https://www.baidu.com" 跳转到百度 -->
+    <!-- v-model：绑定数据到输入框   v-model="url" 绑定百度网址到输入框-->
+  <div id = "app">
+   
+    <a v-bind:href="url">链接1</a>
+
+    <!-- 简化写法 -->
+    <a :href="url">链接2</a>   
+
+    <input type="text" v-model="url">
+
+  </div>
+</body>
+
+<script>
+    // 第二步：创建Vue核心对象，定义数据模型 
+    // 定义vue对象
+    new Vue({
+        el:"#app",  //Vue接管区域
+        data:{
+           url:"https://www.baidu.com"
+        }
+    })
+</script>  
+
+</html>
